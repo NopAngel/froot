@@ -1,4 +1,5 @@
-  froot
+
+   froot
 
 froot is a lightweight and minimalist tool written in POSIX C to execute 
 commands with elevated privileges (similar to doas or sudo).
@@ -13,5 +14,8 @@ Syscalls used:
 * execvp(3)               -> Executing the target command.
 
 
-By: NopAngel    License: GPL-3.0
 
+Fun fact: this project was designed for use on bsd, sooo it might work better on bsd-kernels XD
+
+
+By: NopAngel    -   License: GPL-3.0
