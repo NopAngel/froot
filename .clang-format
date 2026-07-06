@@ -1,0 +1,68 @@
+---
+Language:        Cpp
+# Based on the highly reliable LLVM standard
+BasedOnStyle:    LLVM
+
+# 4-space indentation is standard for privilege management tools like sudo
+IndentWidth:     4
+TabWidth:        4
+UseTab:          Never
+
+# Bracket and statement alignment (Hardened C style)
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass:      true
+  AfterControlStatement: true
+  AfterEnum:       true
+  AfterFunction:   true
+  AfterNamespace:  false
+  AfterObjCDeclaration: false
+  AfterStruct:     true
+  AfterUnion:      true
+  AfterExternBlock: true
+  BeforeCatch:     true
+  BeforeElse:      true
+  IndentBraces:    false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+
+# Spacing to make complex pointer arithmetic/logic clear
+PointerAlignment:    Left
+SpaceBeforeParens:   ControlStatements
+SpacesBeforeTrailingComments: 2
+SpaceInEmptyBlock:   false
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Line lengths and indentation rules
+ColumnLimit:         80
+ContinuationIndentWidth: 4
+AccessModifierOffset: -4
+ConstructorInitializerIndentWidth: 4
+DerivePointerAlignment: false
+
+# Sort includes to easily track system vs. local headers
+SortIncludes:        true
+
+# Formatting control
+AllowShortFunctionsOnASinline: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: Never
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments:    false
+BinPackParameters:   false
+
+# Function parameter alignment
+AlignAfterOpenBracket: AlwaysBreak
+AlignOperands:       Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# Break before operators to prevent hidden issues in conditional statements
+AlwaysBreakAfterReturnType: None
+BreakBeforeBinaryOperators: None
+...
+
