@@ -13,7 +13,5 @@ Syscalls used:
 * execvp(3)               -> Executing the target command.
 
 
-
-
 By: NopAngel    License: GPL-3.0
 
