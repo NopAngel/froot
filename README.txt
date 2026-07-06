@@ -14,8 +14,7 @@ Syscalls used:
 * execvp(3)               -> Executing the target command.
 
 
-
 Fun fact: this project was designed for use on bsd, sooo it might work better on bsd-kernels XD
 
 
-By: NopAngel    -   License: GPL-3.0
+By: NopAngel    -   License: GPL-3.0 (`LICENSE`)
