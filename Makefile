@@ -3,16 +3,20 @@ CC = gcc
 CFLAGS = -Wall -Wextra -O2 -std=gnu99 
 LDFLAGS = -lcrypt
 TARGET = froot
+Q = @
 
 .PHONY: all clean
 
 all: $(TARGET) $(CONFIG_TOOL)
 
 $(TARGET): main.o
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	$(Q)$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	$(Q)echo " CC  $^"
 
 %.o: %.c config.h local.h
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(Q)$(CC) $(CFLAGS) -c $< -o $@
+	$(Q)echo " LANGUAGE "
 
 clean:
-	rm -f $(TARGET) *.o config.h
+	$(Q)rm -f $(TARGET) *.o config.h
+	$(Q)echo "Clean..."
