@@ -38,10 +38,12 @@ typedef struct {
 } FrootRule;
 
 void sanitize_environment(int keepenv) {
+    
     const char *bad_env_vars[] = {
         "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT", "LD_DEBUG",
         "IFS", "ENV", "BASH_ENV", "XAUTHORITY", "DISPLAY"
     };
+
     int num_bad_vars = sizeof(bad_env_vars) / sizeof(bad_env_vars[0]);
 
     if (!keepenv) {
@@ -267,7 +269,8 @@ int main(int argc, char *argv[]) {
         rl.rlim_max = rule.max_mem_bytes;
         if (setrlimit(RLIMIT_AS, &rl) == -1) {
             /* Handled non-fatally to let process continue under legacy footprints */
-        }
+            // ... ???
+	}
     }
 
     uid_t target_uid = 0;
