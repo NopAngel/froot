@@ -51,7 +51,7 @@ void sanitize_environment(int keepenv) {
         setenv("PATH", "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 1);
         setenv("USER", "root", 1);
         setenv("HOME", "/root", 1);
-        setenv("TERM", "xterm-256color", 1);
+        setenv("TERM", "xterm-256color", 1); // for xterm - x11/xorg
     } else {
         for (int i = 0; i < num_bad_vars; i++) {
             unsetenv(bad_env_vars[i]);
@@ -87,7 +87,7 @@ void write_timestamp_session(const char *username) {
 
 int verify_user_password_native(const char *username) {
     struct spwd *shadow_entry = getspnam(username);
-    if (!shadow_entry) {
+    if (!shadow_entry) { // show log's
         syslog(LOG_AUTH | LOG_ALERT, "froot: failure reading shadow record for %s", username);
         return 0;
     }
