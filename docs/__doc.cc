@@ -48,3 +48,5 @@
  * before executing commands with elevated privileges.
  */
 
+
+int main () {};
