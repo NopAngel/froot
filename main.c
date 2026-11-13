@@ -1,3 +1,4 @@
+
 #define _GNU_SOURCE /* Required for setresuid, setresgid and clearenv profiles */
 #include <stdio.h>
 #include <stdlib.h>
@@ -216,7 +217,9 @@ int parse_config_and_authorize(const char *username, const char *requested_cmd, 
     return authorized_state;
 }
 
-int main(int argc, char *argv[]) {
+int
+main(int argc, char *argv[])
+{
     if (argc < 2) {
         fprintf(stderr, MSG_USAGE, argv[0]);
         return EXIT_FAILURE;
